@@ -82,7 +82,7 @@ jobs:
           fi
           cd -
       - name: Publish
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: false
@@ -164,7 +164,7 @@ jobs:
           tar czvf ../../../gping-${{ matrix.target }}.tar.gz gping
           cd -
       - name: Publish
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: false
